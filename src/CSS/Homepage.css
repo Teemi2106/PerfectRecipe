@@ -1,0 +1,124 @@
+/* General reset and styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#canvas {
+  background-color: #fffdff;
+  min-height: 100vh;
+  padding: 1vmin;
+}
+
+#HomeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vmin;
+  font-family: Arial;
+  margin-bottom: 5vmin;
+}
+
+#HomeHeader ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: #f26dc8;
+}
+
+#HomeHeader ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 2.5vmin;
+  cursor: pointer;
+}
+
+#HomeHeader h1 {
+  font-size: 4vmin;
+  font-weight: 700;
+  color: #e70da2;
+}
+
+#search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search input {
+  width: 70%;
+  height: 7vmin;
+  border-radius: 20px;
+  border: 2px solid #e70da2;
+  padding: 1.5vmin;
+}
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.recipe-item {
+  border-radius: 15px;
+  width: 280px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipe-item h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.recipe-item a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+}
+
+.recipe-item a:hover {
+  background-color: #ff4c4c;
+}
+
+.find {
+  width: 96%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Georgia", serif;
+  color: #555;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
