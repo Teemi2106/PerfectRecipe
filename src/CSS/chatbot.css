@@ -1,0 +1,52 @@
+#chatbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#chatTitle {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  text-align: center;
+}
+#chatSection {
+  height: 60vh;
+  overflow-y: scroll;
+  padding: 1vmin;
+  background-color: #f0f0f0;
+}
+
+.user-message {
+  background-color: #e0f7fa;
+  color: #00796b;
+  margin: 1vmin;
+  padding: 1.5vmin;
+  border-radius: 1vmin;
+  text-align: right;
+  align-self: flex-end;
+  width: 70%;
+}
+.bot-message {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  margin: 1vmin;
+  padding: 1.5vmin;
+  border-radius: 1vmin;
+  text-align: left;
+  align-self: flex-start;
+  max-width: 70%;
+}
+#chatInput {
+  width: 100%;
+  display: flex;
+  padding: 3vmin;
+}
+#chatInput input {
+  flex: 1;
+  height: 7vmin;
+  padding: 2vmin;
+}
+
+#chatInput button {
+  background-color: white;
+  border: none;
+}

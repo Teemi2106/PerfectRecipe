@@ -13,6 +13,9 @@ const Header = () => {
   const handleHome = () => {
     navigate("/");
   };
+  const handleOther = () => {
+    navigate("/chatbot");
+  };
 
   const toggleMenu = () => {
     setIsMenuVisible((prev) => !prev);
@@ -34,7 +37,9 @@ const Header = () => {
           <li id="nav" onClick={handleNtr}>
             Nutrition Analysis
           </li>
-          <li id="nav">Blog</li>
+          <li id="nav" onClick={handleOther}>
+            AI ChatBot
+          </li>
         </ul>
       </div>
       <nav
@@ -48,7 +53,9 @@ const Header = () => {
           <li id="nav" onClick={handleNtr}>
             Nutrition Analysis
           </li>
-          <li id="nav">Blog</li>
+          <li id="nav" onClick={handleOther}>
+            AI ChatBot
+          </li>
         </ul>
       </nav>
     </header>
