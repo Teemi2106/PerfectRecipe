@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/ntr.css";
 import axios from "axios";
+import Header from "../components/Header";
 
 const NutritionAnalysis = () => {
   const [search, setSearch] = useState("");
@@ -9,18 +10,8 @@ const NutritionAnalysis = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
-
   const appId = "8203eac6"; // Replace with your App ID
   const appKey = "49245e7d3036d95d70810ccc1cdad730"; // Replace with your App Key
-
-  const handleNtr = () => {
-    navigate("/nutrition-analysis");
-  };
-
-  const handleHome = () => {
-    navigate("/");
-  };
 
   const fetchNutritionData = async () => {
     setLoading(true);
@@ -64,19 +55,7 @@ const NutritionAnalysis = () => {
 
   return (
     <div>
-      <header id="HomeHeader">
-        <h1>PerfectRecipe</h1>
-        <ul className="desktop-menu">
-          <li id="nav" onClick={handleHome}>
-            Recipe Finder
-          </li>
-          <li id="nav" onClick={handleNtr}>
-            Nutrition Analysis
-          </li>
-          <li id="nav">Blog</li>
-        </ul>
-      </header>
-
+      <Header />
       <main id="search">
         <form onSubmit={handleSubmit}>
           <input

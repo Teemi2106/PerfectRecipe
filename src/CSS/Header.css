@@ -1,0 +1,77 @@
+#HomeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vmin;
+  font-family: Arial;
+  margin-bottom: 5vmin;
+}
+
+#HomeHeader ul.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: #f26dc8;
+}
+
+#HomeHeader ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 2.5vmin;
+  cursor: pointer;
+}
+
+#HomeHeader h1 {
+  font-size: 4vmin;
+  font-weight: 700;
+  color: #e70da2;
+}
+
+#menu {
+  display: none;
+}
+
+.menuNav {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.menuNav.show {
+  max-height: 300px;
+}
+
+.menuNav.hide {
+  max-height: 0;
+}
+
+.menuNav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2vmin;
+  list-style-type: none;
+  gap: 3vmin;
+
+  width: 100%;
+}
+.menuNav ul li {
+  border-bottom: 2px solid #e70da2;
+  width: 100%;
+  font-size: 3vmin;
+  font-weight: bolder;
+  font-family: Arial;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+  #HomeHeader ul.desktop-menu {
+    display: none;
+  }
+  #menu {
+    display: block;
+    cursor: pointer;
+  }
+}

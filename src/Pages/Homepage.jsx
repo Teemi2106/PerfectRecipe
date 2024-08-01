@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Homepage.css";
 import axios from "axios";
 import Spinner from "../components/spinner";
-import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
 const Homepage = () => {
   const [search, setSearch] = useState("");
@@ -12,15 +12,6 @@ const Homepage = () => {
 
   const appId = "6043d632";
   const appKey = "972241361c9c74c3a6f9ee4c2380b735";
-
-  const navigate = useNavigate();
-
-  const handleNtr = () => {
-    navigate("/nutrition-analysis");
-  };
-  const handleHome = () => {
-    navigate("/");
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,18 +43,7 @@ const Homepage = () => {
 
   return (
     <div id="canvas">
-      <header id="HomeHeader">
-        <h1>PerfectRecipe</h1>
-        <ul className="desktop-menu">
-          <li id="nav" onClick={handleHome}>
-            Recipe Finder
-          </li>
-          <li id="nav" onClick={handleNtr}>
-            Nutrition Analysis
-          </li>
-          <li id="nav">Blog</li>
-        </ul>
-      </header>
+      <Header />
 
       <main id="search">
         <input
